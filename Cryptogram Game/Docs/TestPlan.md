@@ -1,6 +1,6 @@
 # Test Plan
 
-**Author**: ashen38, xsun311
+**Author**: ashen38
 
 ## 1 Testing Strategy
 

@@ -1,12 +1,7 @@
-/*
- * Created on 01-Mar-2016
- */
 package rmi;
-
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-
 import common.MessageInfo;
 
 public class RMIClient {

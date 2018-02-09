@@ -1,12 +1,16 @@
+/*
+ * Created on 01-Mar-2016
+ */
 package common;
+
 import java.io.Serializable;
 
 /**
  * Utility class that encapsulates the message information to
  * be passed from client to server.  Information can be extracted
  * or constructed as a String for use by the UDP example.
- **/
-
+ *
+ */
 public class MessageInfo implements Serializable {
 
 	public static final long serialVersionUID = 52L;

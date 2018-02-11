@@ -8,9 +8,9 @@ Information can be extracted or constructed as a String for use by the UDP examp
 /* cd Desktop/Git/java/RMI_UDP
 bash rmiserver.sh
 hostname -i
-bash rmiclient.sh 146.169.52.210 1000
+bash rmiclient.sh 146.169.52.174 1000
 bash udpserver.sh 1099
-bash udpclient.sh 146.169.52.210 1099 1000 */
+bash udpclient.sh 146.169.52.174 1099 500 */
 
 public class MessageInfo implements Serializable {
 

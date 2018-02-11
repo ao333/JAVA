@@ -18,6 +18,7 @@ public class UDPServer {
 	boolean[] miss_msg;
 	private boolean close;
 	private int msg_index = 0;
+	private int count=0;
 
 	// Use a timeout (e.g. 30 secs) to ensure the program doesn't block forever
 	private void run() {
@@ -37,10 +38,12 @@ public class UDPServer {
 				System.out.println("timed out!");
 				boolean any_miss = false;
 				for (int index=0; index<totalMessages; index++)
-					if (miss_msg[index] == true){
+					if (miss_msg[index]){
 						any_miss = true;
+						count+=1;
 						System.out.print((index+1)+"missing ");
 					}
+				System.out.println("\n"+(totalMessages-count)+"/"+totalMessages+" received");
 				if(!any_miss)
 					System.out.println("no message is missing");
 				System.exit(0);
@@ -72,16 +75,18 @@ public class UDPServer {
 		}
 
 		// If this is the last expected message, then identify any missing messages
-		System.out.print("Reveived "+msg);
+		System.out.print("Received "+msg);
 		miss_msg[msg.messageNum-1] = false;
 		receivedMessages[msg_index++] = msg.messageNum;
 		if (msg.messageNum == totalMessages){
 			boolean any_miss = false;
 			for (int index=0; index<totalMessages; index++)
-				if (miss_msg[index] == true){
+				if (miss_msg[index]){
 					any_miss = true;
+					count+=1;
 					System.out.print((index+1)+"missing ");
 				}
+			System.out.println("\n"+(totalMessages-count)+"/"+totalMessages+" received");
 			if(!any_miss)
 				System.out.println("No message is missing");
 			close = true;

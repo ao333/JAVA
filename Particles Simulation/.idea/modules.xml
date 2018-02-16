@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Dynamic Programming.iml" filepath="$PROJECT_DIR$/.idea/Dynamic Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Particles Simulation.iml" filepath="$PROJECT_DIR$/Particles Simulation.iml" />
     </modules>
   </component>
 </project>

@@ -9,3 +9,5 @@ public interface Event extends Comparable<Event>{
     public boolean isValid();
 
 }
+
+

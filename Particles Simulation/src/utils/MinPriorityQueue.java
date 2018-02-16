@@ -1,7 +1,5 @@
 package utils;
 
-import java.util.ArrayList;
-
 public class MinPriorityQueue<T extends Comparable<T>> {
 	final static int initialCapacity = 100;
 	int currentCapacity; // if current capacity is not enough, let's double it

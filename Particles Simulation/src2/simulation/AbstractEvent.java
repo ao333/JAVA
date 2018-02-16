@@ -2,29 +2,33 @@ package simulation;
 
 public abstract class AbstractEvent implements Event {
 
-    /**
-     * Constructor for AbstractEvent.
-     */
-    public AbstractEvent(double time) {
-        // TODO implement the constructor 
+    private double time;  //answer given in function below lol
+
+    public AbstractEvent(double time) {           //constructer which is called by Tick and sets time to
+        this.time = time;
     }
 
-    /**
-     * Returns the time (in ticks) at which this event will occur.
-     */
+ 
     @Override
     public double time() {
-        // TODO implement this method
-        return 0;
+        return this.time;
     }
 
-    /**
-     * Compares this object with the specified Event.
-     */
+   
+    
     @Override
     public int compareTo(Event that) {
-        // TODO implement this method
-        return 0;
+    	if (this.time < that.time()) 
+	{
+    		return -1;
+    	} 
+	else if (this.time > that.time()) 
+	{
+    		return 1;
+    	} 
+	else 
+	{
+    		return 0;
+    	}
     }
-
 }

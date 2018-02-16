@@ -7,3 +7,5 @@ public interface ParticleEventHandler {
     public void reactTo(Collision c);
 
 }
+
+

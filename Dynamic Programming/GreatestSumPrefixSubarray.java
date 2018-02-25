@@ -22,4 +22,4 @@ public class GreatestSumPrefixSubarray {
     }
     return current_max;
   }
-}d
+}

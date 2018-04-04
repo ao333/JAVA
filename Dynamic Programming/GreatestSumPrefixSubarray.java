@@ -1,13 +1,11 @@
 import java.io.*;
 
 public class GreatestSumPrefixSubarray {
-
   public static void main(String[] args) {
     int[] a = {-2, -3, 4, -1, -2, 1, 5, -3};
     System.out.println("max contiguous sum is "+maxSubArraySum(a));
   }
 
-  // naive
   static int maxSubArraySum(int a[]){
     int size = a.length;
     int current_max=0, current_sum=0;

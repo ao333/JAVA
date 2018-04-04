@@ -1,8 +1,7 @@
 public class Power {
 
     public static void main(String[] args) {
-        int x = 2;
-        int n = 6;
+        int x = 2, n = 6;
         System.out.print(Pow(x,n));
     }
 
@@ -17,5 +16,4 @@ public class Power {
         if(n%2==0) return tmp*tmp;
         return tmp*tmp*x;
     }
-
 }

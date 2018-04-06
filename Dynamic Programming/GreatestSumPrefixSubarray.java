@@ -6,7 +6,7 @@ public class GreatestSumPrefixSubarray {
     System.out.println("max contiguous sum is "+maxSubArraySum(a));
   }
 
-  static int maxSubArraySum(int a[]){
+  private static int maxSubArraySum(int a[]){
     int size = a.length;
     int current_max=0, current_sum=0;
 

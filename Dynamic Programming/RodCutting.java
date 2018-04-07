@@ -3,7 +3,7 @@ public class RodCutting {
     public static void main(String args[]) {
         int p[] = new int[] {1, 5, 8, 9, 10, 17, 17, 20};
         int n = 4;
-        System.out.println(rodCuttingR(p, n));
+        System.out.println(rodCutting(p, n));
     }
     // Iterative Memoization
     private static int rodCutting(int p[], int n) {

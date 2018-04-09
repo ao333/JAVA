@@ -6,12 +6,11 @@ public class RodCutting {
         System.out.println(rodCutting(p, n));
     }
     // Iterative Memoization
-    private static int rodCutting(int p[], int n) {
+    static int rodCutting(int p[], int n) {
         int v[] = new int[n+1];
         int max = 0;
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++)
-                max = Math.max(max, p[j] + v[i-j-1]);
+            for (int j = 0; j < i; j++) max = Math.max(max, p[j] + v[i-j-1]);
             v[i] = max;
         }
         return v[n];
@@ -20,8 +19,7 @@ public class RodCutting {
     private static int rodCuttingR(int p[], int n) {
         if (n <= 0) return 0;
         int max = 0;
-        for (int i = 0; i < n; i++)
-            max = Math.max(max, p[i] + rodCuttingR(p, n-i-1));
+        for (int i = 0; i < n; i++) max = Math.max(max, p[i] + rodCuttingR(p, n-i-1));
         return max;
     }
 }

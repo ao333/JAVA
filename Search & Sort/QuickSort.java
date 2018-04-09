@@ -6,7 +6,7 @@ public class QuickSort {
          for (int i:a) System.out.print(i + ",");
     }
 
-    private static void quickSort(int[] a, int l, int r) {
+    static void quickSort(int[] a, int l, int r) {
         // pick the pivot
         int m = l + (r - l) / 2;
         int pivot = a[m];

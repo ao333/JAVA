@@ -6,7 +6,7 @@ public class HeapSort {
         for (int i:a) System.out.print(i + ",");
     }
     
-    private static void heapSort(int a[]) {
+    static void heapSort(int a[]) {
         int n = a.length;
         // Build heap (rearrange array)
         for (int i = n / 2 - 1; i >= 0; i--) heapify(a, n, i);
@@ -19,7 +19,7 @@ public class HeapSort {
         }
     }
     // Heapify a subtree rooted with node i which is an index in a[]. n is size of heap
-    private static void heapify(int a[], int n, int i) {
+    static void heapify(int a[], int n, int i) {
         int max = i; // Initialize max as root
         int l = 2*i + 1, r = 2*i + 2;
         // If left child is larger than root

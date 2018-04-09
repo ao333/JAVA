@@ -6,7 +6,7 @@ public class MergeSort {
         for (int i:a) System.out.print(i+",");
     }
 
-    private static void mergeSort(int a[], int l, int r) {
+    static void mergeSort(int a[], int l, int r) {
         if (l < r) {
             int m = (l+r)/2; // Find the middle point
             mergeSort(a, l, m); // Sort first half
@@ -15,7 +15,7 @@ public class MergeSort {
         }
     }
 
-    private static void merge(int a[], int l, int m, int r) {
+    static void merge(int a[], int l, int m, int r) {
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
         int n2 = r - m;

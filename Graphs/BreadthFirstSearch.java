@@ -1,25 +1,25 @@
 import java.util.*;
 
-public class BFS {
+public class BreadthFirstSearch {
 
     public static void main(String args[]) {
-        BFS g = new BFS(4);
+        BreadthFirstSearch g = new BreadthFirstSearch(4);
         g.addEdge(0, 1); g.addEdge(0, 2); g.addEdge(1, 2);
         g.addEdge(2, 0); g.addEdge(2, 3); g.addEdge(3, 3);
-        g.BreadthFirstSearch(2);
+        g.BFS(2);
     }
 
-    private int V; // No. of vertices
-    private LinkedList<Integer> adj[]; // Adjacency Lists
-    private BFS(int v) {
+    int V; // No. of vertices
+    LinkedList<Integer> adj[]; // Adjacency Lists
+    BreadthFirstSearch(int v) {
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; i++) adj[i] = new LinkedList();
     }
 
-    private void addEdge(int v,int w) { adj[v].add(w); }
+    void addEdge(int v,int w) { adj[v].add(w); }
 
-    private void BreadthFirstSearch(int s) {
+    void BFS(int s) {
         boolean visited[] = new boolean[V]; // Mark all vertices as unvisited (false)
         LinkedList<Integer> queue = new LinkedList<>(); // Create a queue
         visited[s]=true; // Mark the current node as visited and enqueue it

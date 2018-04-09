@@ -5,11 +5,10 @@ public class OddNumber {
         oddNumber(k);
     }
 
-    // print every odd number from 0 to k
-    private static void oddNumber(int k) {
+    static void oddNumber(int k) {
         int i = 0;
-        i = (i % 2 == 0? i + 1: i);
         while (i <= k) {
+            i = (i % 2 == 0 ? i + 1: i);
             System.out.print(i+" ");
             i = i+2;
         }

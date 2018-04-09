@@ -5,7 +5,7 @@ public class BinarySearch {
         System.out.print(binarySearch(a,0,a.length-1,9));
     }
 
-    private static int binarySearch(int array[], int left, int right, int target) {
+    static int binarySearch(int array[], int left, int right, int target) {
         int mid_index = (left + right) / 2;
         int mid = array[mid_index];
         if (mid == target) return mid_index;

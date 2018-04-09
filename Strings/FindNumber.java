@@ -6,10 +6,8 @@ public class FindNumber {
         System.out.print(findNumber(a,k));
     }
 
-    private static String findNumber(int[] a, int k) {
-        for(int i=0; i<a.length; i++)
-            if (a[i] == k)
-                return "Yes";
+    static String findNumber(int[] a, int k) {
+        for(int i:a) if (i == k) return "Yes";
         return "No";
     }
 }

@@ -6,7 +6,7 @@ public class InsertionSort {
         for (int i:a) System.out.print(i+",");
     }
 
-    private static void insertionSort(int[] a) {
+    static void insertionSort(int[] a) {
         int n = a.length;
         for (int i = 1; i < n; i++)
             for (int j = i; j > 0; j--)

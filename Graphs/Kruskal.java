@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-class Kruskal {
+public class Kruskal {
 
     public static void main (String[] args) {
         int V = 4;  // Number of vertices in graph
@@ -24,22 +24,22 @@ class Kruskal {
     class subset { int parent, rank;}
 
     int V, E;    // V-> no. of vertices & E->no.of edges
-    private Edge edge[]; // collection of all edges
+    Edge edge[]; // collection of all edges
     // Creates a graph with V vertices and E edges
-    private Kruskal(int v, int e) {
+    Kruskal(int v, int e) {
         V = v;
         E = e;
         edge = new Edge[E];
         for (int i=0; i<e; ++i) edge[i] = new Edge();
     }
     // A utility function to find set of an element i (uses path compression technique)
-    private int find(subset subsets[], int i) {
+    int find(subset subsets[], int i) {
         if (subsets[i].parent != i) // find root and make root as parent of i (path compression)
             subsets[i].parent = find(subsets, subsets[i].parent);
         return subsets[i].parent;
     }
     // A function that does union of two sets of x and y (uses union by rank)
-    private void Union(subset subsets[], int x, int y) {
+    void Union(subset subsets[], int x, int y) {
         int xroot = find(subsets, x);
         int yroot = find(subsets, y);
         // Attach smaller rank tree under root of high rank tree (Union by Rank)
@@ -51,7 +51,7 @@ class Kruskal {
         }
     }
 
-    private void kruskal() {
+    void kruskal() {
         Edge result[] = new Edge[V];  // Tnis will store the resulting MST
         int e = 0;  // An index variable, used for result[]
         int i;  // An index variable, used for sorted edges

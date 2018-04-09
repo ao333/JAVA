@@ -3,12 +3,11 @@ public class Knapsack {
     public static void main(String args[]) {
         int val[] = new int[]{60, 100, 120};
         int wt[] = new int[]{10, 20, 30};
-        int W = 50;
-        int n = val.length;
+        int W = 50, n = val.length;
         System.out.println(knapsack(W, n, val, wt));
     }
 
-    private static int knapsack(int W, int n, int val[], int wt[]) {
+    static int knapsack(int W, int n, int val[], int wt[]) {
         int i, w;
         int K[][] = new int[n+1][W+1];
         for (i = 0; i <= n; i++)

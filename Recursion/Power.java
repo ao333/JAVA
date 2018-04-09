@@ -5,7 +5,7 @@ public class Power {
         System.out.print(Pow(x,n));
     }
 
-    private static int Pow(int x, int n) {
+    static int Pow(int x, int n) {
         int tmp;
 
         if(n<0) return -1;

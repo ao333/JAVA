@@ -1,11 +1,11 @@
-public class BinarySearchTree {
+public class BinaryTree {
 /*   50
    /   \
  30     70
  / \    / \
 20 40  60 80 */
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
+        BinaryTree tree = new BinaryTree();
         tree.insert(50);
         tree.insert(30);
         tree.insert(20);
@@ -26,7 +26,7 @@ public class BinarySearchTree {
     }
     Node root;
 
-    BinarySearchTree() { root = null; }
+    BinaryTree() { root = null; }
 
     void insert(int key) { root = insertRec(root, key); }
     // A recursive function to insert a new key in BST

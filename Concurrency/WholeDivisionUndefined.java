@@ -1,1 +1,5 @@
-public class WholeDivisionUndefined extends Exception { }
+package intro;
+
+public class WholeDivisionUndefined extends Exception {
+
+}

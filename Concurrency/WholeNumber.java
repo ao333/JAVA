@@ -1,16 +1,30 @@
-public class WholeNumber implements Expression {
-    private int value;
+package intro;
 
-    public WholeNumber(int v) { value = v; }
+/**
+ * This class represents a whole number
+ */
+public class WholeNumber extends AbstractExpression {
+  
+  private int value;
 
-    public String toString() { return String.valueOf(value); }
+  public WholeNumber(int val) {
+    value = val;
+  }
 
-    public boolean equals(Object ob) {
-        if (ob == null) return false;
-        if (!(ob instanceof WholeNumber)) return false;
+  public String toString() {
+    return String.valueOf(value);
+  }
 
-        return this.value == ((WholeNumber) ob).value;
-    }
+  public boolean equals(Object obj) {
+    if (obj == null)                    { return false; }
+    if (! (obj instanceof WholeNumber)) { return false; }
 
-    public int evaluate() { return this.value; }
+    WholeNumber that = (WholeNumber) obj;
+    return this.value == that.value;
+  }
+
+  public int evaluate() {
+    return this.value;
+  }
+
 }

@@ -1,24 +1,24 @@
-public class HeapSort {
+public class Heap {
     
     public static void main(String[] args) {
         int[] a = {5,3,1,9,7};
-        heapSort(a);
+        sort(a);
         for (int i:a) System.out.print(i + ",");
     }
     
-    static void heapSort(int a[]) {
+    static void sort(int a[]) {
         int n = a.length;
-        // Build heap (rearrange array)
+        // Build sort (rearrange array)
         for (int i = n / 2 - 1; i >= 0; i--) heapify(a, n, i);
-        // One by one extract an element from heap and move current root to end
+        // One by one extract an element from sort and move current root to end
         for (int i = n - 1; i >= 0; i--) {
             int swap = a[0];
             a[0] = a[i];
             a[i] = swap;
-            heapify(a, i, 0); // call max heapify on the reduced heap
+            heapify(a, i, 0); // call max heapify on the reduced sort
         }
     }
-    // Heapify a subtree rooted with node i which is an index in a[]. n is size of heap
+    // Heapify a subtree rooted with node i which is an index in a[]. n is size of sort
     static void heapify(int a[], int n, int i) {
         int max = i; // Initialize max as root
         int l = 2*i + 1, r = 2*i + 2;

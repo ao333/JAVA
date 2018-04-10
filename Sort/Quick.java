@@ -1,12 +1,12 @@
-public class QuickSort {
+public class Quick {
     
     public static void main(String[] args) {
          int[] a = {5,3,1,9,7};
-         quickSort(a,0,a.length-1);
+         sort(a,0,a.length-1);
          for (int i:a) System.out.print(i + ",");
     }
 
-    static void quickSort(int[] a, int l, int r) {
+    static void sort(int[] a, int l, int r) {
         // pick the pivot
         int m = l + (r - l) / 2;
         int pivot = a[m];
@@ -23,8 +23,8 @@ public class QuickSort {
             }
         }
         // recursively sort two subparts
-        if (l < j) quickSort(a, l, j);
-        if (r > i) quickSort(a, i, r);
+        if (l < j) sort(a, l, j);
+        if (r > i) sort(a, i, r);
     }
 }
 

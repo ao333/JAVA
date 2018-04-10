@@ -1,8 +1,13 @@
-public abstract class BinaryExpression implements Expression {
-    protected Expression left, right;
+package intro;
 
-    public BinaryExpression (Expression l, Expression r) {
-        left = l;
-        right = r;
-    }
+public abstract class BinaryExpression extends AbstractExpression {
+  
+  protected Expression left;
+  protected Expression right;
+
+  public BinaryExpression(Expression l, Expression r) {
+    left = l;
+    right = r;
+  }
+
 }

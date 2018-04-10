@@ -1,16 +1,16 @@
-public class MergeSort {
+public class Merge {
 
     public static void main(String[] args) {
         int[] a = {5,3,1,9,7};
-        mergeSort(a,0,a.length-1);
+        sort(a,0,a.length-1);
         for (int i:a) System.out.print(i+",");
     }
 
-    static void mergeSort(int a[], int l, int r) {
+    static void sort(int a[], int l, int r) {
         if (l < r) {
             int m = (l+r)/2; // Find the middle point
-            mergeSort(a, l, m); // Sort first half
-            mergeSort(a , m+1, r); // Sort second half
+            sort(a, l, m); // Sort first half
+            sort(a , m+1, r); // Sort second half
             merge(a, l, m, r); // Merge the sorted halves
         }
     }

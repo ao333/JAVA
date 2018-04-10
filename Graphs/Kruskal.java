@@ -4,7 +4,7 @@ import java.lang.*;
 public class Kruskal {
 
     public static void main (String[] args) {
-        int V = 4;  // Number of vertices in graph
+        int V = 4;  // Number of V in graph
         int E = 5;  // Number of edges in graph
         Kruskal graph = new Kruskal(V, E);
         graph.edge[0].src = 0; graph.edge[0].dest = 1; graph.edge[0].weight = 10; // add edge 0-1
@@ -23,9 +23,9 @@ public class Kruskal {
     // A class to represent a subset for union-find
     class subset { int parent, rank;}
 
-    int V, E;    // V-> no. of vertices & E->no.of edges
+    int V, E;    // V-> no. of V & E->no.of edges
     Edge edge[]; // collection of all edges
-    // Creates a graph with V vertices and E edges
+    // Creates a graph with V V and E edges
     Kruskal(int v, int e) {
         V = v;
         E = e;
@@ -52,7 +52,7 @@ public class Kruskal {
     }
 
     void kruskal() {
-        Edge result[] = new Edge[V];  // Tnis will store the resulting MST
+        Edge result[] = new Edge[V];  // Tnis will store the resulting Prim
         int e = 0;  // An index variable, used for result[]
         int i;  // An index variable, used for sorted edges
         for (i=0; i<V; ++i) result[i] = new Edge();
@@ -81,7 +81,7 @@ public class Kruskal {
                 Union(subsets, x, y);
             }
         }
-        // print the contents of result[] to display the built MST
+        // print the contents of result[] to display the built Prim
         for (i = 0; i < e; ++i) System.out.println(result[i].src+" -- " + result[i].dest+" == " + result[i].weight);
     }
 }

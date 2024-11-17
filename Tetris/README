@@ -1,0 +1,5 @@
+Compiled classes included, but if you would like to recompile:
+javac Tetris.java
+
+To run, make sure to have inputs in input.txt then:
+java Tetris < input.txt > output.txt
